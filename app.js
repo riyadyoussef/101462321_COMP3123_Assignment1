@@ -1,25 +1,25 @@
 const express = require('express');
 const connectDB = require('./config/db');
 
-// Initialize Express
+// Initialize express
 const app = express();
 
-// Connect to MongoDB
+// Connect to Database
 connectDB();
 
-// Middleware
+// Initialize Middleware
 app.use(express.json());
 
-// Root Route
+// define a route to test the server
 app.get('/', (req, res) => {
-    res.send('Welcome to the COMP3123 Assignment 1 API');
+    res.send('Welcome to COMP3123 Assignment1 API');
 });
 
-// Define routes
+// define routes
 app.use('/api/v1/user', require('./routes/userRoutes'));
 app.use('/api/v1/emp', require('./routes/employeeRoutes'));
 
-// Set the server to listen on a port
+// set server to listen on port 5000
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 

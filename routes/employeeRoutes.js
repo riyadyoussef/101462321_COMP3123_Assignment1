@@ -14,13 +14,13 @@ router.get('/employees', getAllEmployees);
 // POST: Create a new employee
 router.post('/employees', createEmployee);
 
-// GET: Retrieve a single employee by ID
+// GET: Retrieve an employee by ID
 router.get('/employees/:eid', getEmployeeById);
 
 // PUT: Update an employee by ID
 router.put('/employees/:eid', updateEmployee);
 
-// DELETE: Remove an employee by ID
+// DELETE: Delete an employee by ID
 router.delete('/employees/:eid', deleteEmployee);
 
 module.exports = router;

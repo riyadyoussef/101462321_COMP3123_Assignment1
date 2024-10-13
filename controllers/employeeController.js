@@ -47,7 +47,7 @@ exports.updateEmployee = async (req, res) => {
     }
 };
 
-// DELETE: Remove an employee by ID
+// DELETE: Delete an employee by ID
 exports.deleteEmployee = async (req, res) => {
     try {
         const employee = await Employee.findByIdAndDelete(req.params.eid);
